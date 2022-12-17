@@ -1,0 +1,32 @@
+{
+  "name": "iban-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "lint:codestyle": "prettier --check src",
+    "watch": "concurrently \"npm:watch:*\"",
+    "watch:js": "node --watch dist/main.js",
+    "watch:ts": "tsc --watch"
+  },
+  "author": "Luiz Socrate <luiz@socrate.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.10.2",
+    "fastify-plugin": "^4.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4"
+  },
+  "volta": {
+    "node": "18.12.1",
+    "npm": "9.2.0"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  }
+}
