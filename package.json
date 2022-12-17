@@ -6,17 +6,20 @@
     "build": "tsc",
     "lint:codestyle": "prettier --check src",
     "watch": "concurrently \"npm:watch:*\"",
-    "watch:js": "node --watch dist/main.js",
+    "watch:js": "node --require dotenv/config --watch dist/main.js",
     "watch:ts": "tsc --watch"
   },
   "author": "Luiz Socrate <luiz@socrate.com.br>",
   "license": "MIT",
   "dependencies": {
     "fastify": "^4.10.2",
-    "fastify-plugin": "^4.4.0"
+    "fastify-plugin": "^4.4.0",
+    "zod": "^3.20.2"
   },
   "devDependencies": {
+    "@types/node": "^18.11.16",
     "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.1",
     "typescript": "^4.9.4"

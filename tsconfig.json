@@ -1,7 +1,6 @@
 {
   "include": ["src/main.ts"],
   "compilerOptions": {
-    "baseUrl": "src",
     "incremental": true,
     "module": "ES2022",
     "moduleResolution": "nodenext",
