@@ -1,5 +1,5 @@
 {
-  "include": ["src/main.ts"],
+  "include": ["src/main.ts", "src/**/*.test.ts"],
   "compilerOptions": {
     "incremental": true,
     "module": "ES2022",
