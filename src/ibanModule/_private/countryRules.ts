@@ -1,4 +1,4 @@
-export type Rules = { charCount: number };
+import type { Rules } from "./types.js";
 
 export const rulesForCountry = (country: string): undefined | Rules =>
   isSupportedCountry(country) ? countryRules[country] : undefined;

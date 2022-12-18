@@ -7,7 +7,8 @@
  * Monads could be a good solution.
  *
  */
-import { Rules, rulesForCountry } from "./countryRules.js";
+import { rulesForCountry } from "./countryRules.js";
+import type { Rules } from "./types.js";
 
 const InvalidCountry = Symbol("Invalid Country");
 const InvalidLength = Symbol("Invalid length");
