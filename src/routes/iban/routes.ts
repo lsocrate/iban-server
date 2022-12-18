@@ -1,5 +1,5 @@
 import type { FastifyPluginAsyncJsonSchemaToTs } from "@fastify/type-provider-json-schema-to-ts";
-import { parseIban } from "./parser.js";
+import { parseIban } from "../../ibanModule/index.js";
 
 export const ibanRoutes: FastifyPluginAsyncJsonSchemaToTs = async (fastify) => {
   fastify.register(getIban);
@@ -25,7 +25,7 @@ const getIban: FastifyPluginAsyncJsonSchemaToTs = async (fastify) => {
     },
   } as const;
 
-  fastify.get("/iban/:iban", { schema }, async (req, reply) => {
+  fastify.get("/:iban", { schema }, async (req) => {
     const parsed = parseIban(req.params.iban);
     return { isValid: parsed.success };
   });

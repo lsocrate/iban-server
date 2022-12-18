@@ -1,1 +1,1 @@
-export { ibanRoutes } from "./_private/routes.js";
+export { parseIban, PARSER_ERROR } from "./_private/parser.js";
